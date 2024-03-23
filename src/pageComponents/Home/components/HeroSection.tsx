@@ -11,7 +11,7 @@ const HeroSection = () => {
         backgroundImage: `url("./images/herosection/washingmachine.jpg")`,
       }}
     >
-      <div className="absolute bg-gradient-to-l from-[#0c090f] to-[#2d1749] opacity-70 3xl:opacity-70 w-full h-full top-0 left-0 right-0 bottom-0"></div>
+      <div className="absolute bg-gradient-to-l from-[#0c090f] to-[#2d1749] opacity-80 3xl:opacity-70 w-full h-full top-0 left-0 right-0 bottom-0"></div>
       <div className="lg:pt-[95px]  h-[100vh] flex items-center justify-center lg:translate-y-[-20px]    3xl:pt-[100px] pt-[50px]    relative ">
         <div className="layout component-padding  relative">
           <div className="grid lg:grid-cols-12">
