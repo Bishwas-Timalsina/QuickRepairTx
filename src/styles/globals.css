@@ -1,0 +1,50 @@
+body{
+    background-color: var(--primary-color);
+}
+
+:root{
+    --primary-color:#F5F5F5;
+    --accent-color:#8D2CFF;
+    --extra-accent-color:#d35ff3;
+    --hover-accent-color:#7924DC;
+    --black-color:#1e1e1e;
+    --white-color: #F5F5F5;
+}
+.layout {
+    @apply max-w-[1280px] lg:max-w-7xl mx-auto;
+}
+  
+.component-padding {
+    @apply lg:py-[80px] py-[50px] lg:px-4 px-6 ;
+}
+
+.white-color{
+    @apply text-[#F5F5F5]
+}
+.black-color{
+    @apply text-[#1e1e1e]
+}
+.button-bg{
+    @apply bg-[#8D2CFF] hover:bg-[#7924DC] transition-all duration-500
+}
+
+/* webkit scrollbar  */
+::-webkit-scrollbar {
+    width: 2px;
+    height: 4px;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    max-height: 12px;
+    height: 4px;
+}
+
+.stop1 {
+    stop-color: #8D2CFF;
+  }
+.stop2 {
+    stop-color: #7924DC;
+}
