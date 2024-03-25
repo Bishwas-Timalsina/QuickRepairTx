@@ -6,7 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const HeroSection = () => {
   return (
     <div
-      className="max-w-[1920px] mx-auto relative bg-no-repeat white-color"
+      className="max-w-[1920px] mx-auto relative bg-no-repeat white-color bg-cover"
       style={{
         backgroundImage: `url("./images/herosection/washingmachine.jpg")`,
       }}

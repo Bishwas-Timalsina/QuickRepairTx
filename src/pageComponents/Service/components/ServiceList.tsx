@@ -37,16 +37,16 @@ const ServiceList = () => {
             }}
           />
         </div>
-        <div className="flex flex-col gap-14">
+        <div className="flex flex-col lg:gap-14 gap-[150px]">
           {serviceCollection?.map((data, index) => {
             return (
-              <div key={index} className="">
+              <div key={index} className="flex flex-col ">
                 <div
                   className={`${
                     index % 2 !== 0
                       ? "lg:flex-row-reverse flex-col"
                       : "lg:flex-row flex-col"
-                  } flex justify-between items-center w-[100%]`}
+                  } flex lg:justify-between lg:items-center w-[100%] `}
                 >
                   <div
                     className={`${
@@ -57,7 +57,7 @@ const ServiceList = () => {
                       <img
                         src={data?.img.src}
                         alt=""
-                        className="rounded-full w-[50vh] h-[50vh]  object-cover "
+                        className="rounded-full lg:w-[50vh] lg:h-[50vh] w-[25vh] h-[25vh]  object-cover "
                       />
                     </div>
                     <div

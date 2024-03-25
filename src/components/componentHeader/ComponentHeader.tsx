@@ -3,7 +3,7 @@ import type { IComponentHeader } from "../../interface/interface";
 const ComponentHeader = ({ data }: IComponentHeader) => {
   return (
     <div className="">
-      <div className="bg-gradient-to-t font-semibold text-transparent bg-clip-text from-[#8D2CFF] to-[#7924DC]">
+      <div className="bg-gradient-to-t  font-semibold text-transparent bg-clip-text from-[#8D2CFF] to-[#7924DC]">
         {data?.section}
       </div>
       <div className="lg:text-[48px]  text-[28px] font-semibold">
