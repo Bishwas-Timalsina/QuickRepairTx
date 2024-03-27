@@ -11,63 +11,79 @@ const PricingPlans = () => {
       pricingService: [
         {
           list: "Diagnosis of up to 2 electronic appliances.",
+          included: "yes",
         },
         {
           list: "Basic repairs for identified issues.",
+          included: "yes",
         },
         {
           list: "Standard parts replacement as needed.",
+          included: "yes",
         },
         {
           list: "30-day warranty on repairs.",
+          included: "no",
         },
         {
           list: "Priority scheduling for service visits.",
+          included: "no",
         },
       ],
     },
     {
       title: "Gold Plan",
-      price: "$ 29.65",
+      price: "$ 50.65",
       pricingService: [
         {
           list: "Comprehensive diagnosis of up to 3 electronic appliances.",
+          included: "yes",
         },
         {
           list: "Advanced repairs for identified issues.",
+          included: "yes",
         },
         {
           list: "Premium parts replacement for enhanced durability.",
+          included: "yes",
         },
         {
           list: "60-day warranty on repairs.",
+          included: "no",
         },
         {
           list: "Annual maintenance check-up for covered appliances.",
+          included: "no",
         },
       ],
     },
     {
       title: "Diamond Plan",
-      price: "$ 29.65",
+      price: "$ 85.65",
       pricingService: [
         {
           list: "Thorough diagnosis of up to 5 electronic appliances",
+          included: "yes",
         },
         {
           list: "Extensive repairs for identified issues, including complex troubleshooting.",
+          included: "yes",
         },
         {
-          list: "High-quality parts replacement for maximum performance",
+          list: "30-day warranty on repairs",
+          included: "yes",
         },
         {
-          list: "90-day warranty on repairs.",
+          list: "Priority scheduling for service visits.",
+          included: "yes",
         },
         {
-          list: "Exclusive discounts on future repairs and upgrades.",
+          list: "60-day warranty on repairs",
+          included: "yes",
         },
         {
-          list: "Dedicated customer support hotline for immediate assistance",
+          list: "Annual maintenance check-up for covered appliances",
+          included: "yes",
         },
       ],
     },
@@ -85,35 +101,53 @@ const PricingPlans = () => {
             />
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-3 gap-8">
           {pricingList?.map((data, index) => {
             return (
-              <div className="bg-[#FEFEFE] p-8 h-[100%] flex flex-col justify-between">
-                <div>
-                  <div className="lg:text-[24px] text-[20px]">
-                    {data?.title}
-                  </div>
+              <a
+                href="#"
+                className="bg-[#FEFEFE] group drop-shadow-md rounded-[8px] p-8 h-[100%] flex flex-col justify-between"
+              >
+                <div className="flex flex-col gap-8 lg:mb-[75px]">
                   <div>
-                    <div className="lg:text-[57px] font-medium">
-                      {data?.price}{" "}
-                      <span
-                        style={{
-                          fontSize: "16px",
-                        }}
-                      >
-                        /Monthly
-                      </span>
+                    <div className="text-[16px]">{data?.title}</div>
+                    <div>
+                      <div className="lg:text-[57px] font-medium group-hover:text-[#8D2CFF]">
+                        {data?.price}{" "}
+                        <span
+                          style={{
+                            fontSize: "12px",
+                            color: "gray",
+                          }}
+                        >
+                          / Monthly
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <div className="">
-                    <div className="">
+                    <div className="flex flex-col gap-4">
                       {data?.pricingService.map((data, index) => {
                         return (
-                          <div key={index} className="flex items-center gap-2">
-                            <div>
-                              <FaCheck />
+                          <div key={index} className="flex  gap-4">
+                            <div
+                              className={`${
+                                data?.included == "yes"
+                                  ? "bg-[#d1b3f3]"
+                                  : "bg-gray-300"
+                              } translate-y-[-1px]  flex items-center justify-center p-2  h-[25px] w-[25px] rounded-full`}
+                            >
+                              <div>
+                                <FaCheck size={10} />
+                              </div>
                             </div>
-                            <div>{data.list}</div>
+                            <div
+                              className={`
+                                ${data.included == "no" ? "line-through" : ""}
+                                `}
+                            >
+                              {data.list}
+                            </div>
                           </div>
                         );
                       })}
@@ -127,7 +161,7 @@ const PricingPlans = () => {
                     }}
                   />
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
