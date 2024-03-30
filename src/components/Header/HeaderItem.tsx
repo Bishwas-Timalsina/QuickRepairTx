@@ -18,8 +18,8 @@ const HeaderItem = () => {
     },
 
     {
-      name: "Products",
-      slug: "/products",
+      name: "About Us",
+      slug: "/about-us",
     },
     {
       name: "Blogs",

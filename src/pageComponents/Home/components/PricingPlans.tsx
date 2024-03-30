@@ -106,7 +106,7 @@ const PricingPlans = () => {
             return (
               <a
                 href="#"
-                className="bg-[#FEFEFE] group drop-shadow-md rounded-[8px] p-8 h-[100%] flex flex-col justify-between"
+                className="bg-[#F5F5F5] group drop-shadow-md rounded-[8px] p-8 h-[100%] flex flex-col justify-between"
               >
                 <div className="flex flex-col gap-8 lg:mb-[75px]">
                   <div>

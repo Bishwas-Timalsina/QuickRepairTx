@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServiceList from "../pageComponents/Service/components/ServiceList";
+import WhyChooseUs from "../pageComponents/Service/components/WhyChooseUs";
+import PageHeader from "../components/pageHeader/components/PageHeader";
+
+//css
+import "../styles/globals.css";
+---
+
+<div>
+  <Layout>
+    <PageHeader
+      data={{
+        image:
+          "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2023/05/ac-repair.jpeg.jpg",
+        title: "Our Service",
+        subDetail:
+          " Whether it's a minor fix or a major overhaul, trust us to restore your appliances to optimal functionality, providing you with peace of mind and convenience at every step.",
+      }}
+    />
+    <ServiceList />
+    <WhyChooseUs />
+  </Layout>
+</div>

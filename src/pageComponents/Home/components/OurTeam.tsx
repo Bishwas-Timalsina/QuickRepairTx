@@ -50,7 +50,10 @@ const OurTeam = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-[4px] p-6 flex flex-col gap-4"
+                  style={{
+                    backgroundColor: "var(--primary-color)",
+                  }}
+                  className=" rounded-[8px] drop-shadow-md p-6 flex flex-col gap-4"
                 >
                   <div>
                     <img src={data?.img?.src} alt="" />

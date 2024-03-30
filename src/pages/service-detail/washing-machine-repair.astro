@@ -1,0 +1,23 @@
+---
+import PageHeader from "../../components/pageHeader/components/PageHeader";
+import WashingMachine from "../../pageComponents/ServiceDetails/components/WashingMachineRepair";
+
+//astro layout
+import Layout from "../../layouts/Layout.astro";
+
+//css
+import "../../styles/globals.css";
+---
+
+<div>
+  <Layout>
+    <PageHeader
+      data={{
+        image:
+          "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2023/05/ac-repair.jpeg.jpg",
+        title: "Washing Machine Repair",
+      }}
+    />
+    <WashingMachine />
+  </Layout>
+</div>
