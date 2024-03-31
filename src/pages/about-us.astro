@@ -1,7 +1,10 @@
 ---
+import CallToAction from "../components/CallToAction/components/CallToAction";
 import PageHeader from "../components/pageHeader/components/PageHeader";
 import Layout from "../layouts/Layout.astro";
 import About from "../pageComponents/AboutUs/components/AboutUs";
+import OurTeam from "../pageComponents/Home/components/OurTeam";
+import RepairProcess from "../pageComponents/Home/components/RepairProcess";
 
 //styles
 import "../styles/globals.css";
@@ -17,5 +20,8 @@ import "../styles/globals.css";
       }}
     />
     <About />
+    <RepairProcess />
+    <OurTeam />
+    <CallToAction client:load />
   </Layout>
 </div>

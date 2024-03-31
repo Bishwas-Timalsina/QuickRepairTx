@@ -14,24 +14,16 @@ const Footer = () => {
       title: "Services",
       servicesName: [
         {
-          name: "PC Repair",
-          slug: "pc-repair",
+          name: "Washing Machine Repair",
+          slug: "washing-machine-repair",
         },
         {
-          name: "Laptop Repair",
-          slug: "pc-repair",
+          name: "Refrigerator Repair",
+          slug: "refrigerator-repair",
         },
         {
-          name: "Smartphone Repair",
-          slug: "pc-repair",
-        },
-        {
-          name: "Tablet Repair",
-          slug: "pc-repair",
-        },
-        {
-          name: "MAC Repair",
-          slug: "pc-repair",
+          name: "AC Repair",
+          slug: "ac-repair",
         },
       ],
     },
@@ -117,12 +109,9 @@ const Footer = () => {
 
           {footerList?.map((data: IFooter, index: any) => {
             return (
-              <div
-                key={index}
-                className="flex flex-col items-center justify-center"
-              >
+              <div key={index} className="flex flex-col items-center ">
                 <div className="flex flex-col gap-4">
-                  <div className=" text-[18px] font-semibold h-[7vh] ">
+                  <div className=" text-[18px] font-semibold  h-[7vh] ">
                     {data?.title}
                   </div>
                   <div className="flex flex-col gap-4">
