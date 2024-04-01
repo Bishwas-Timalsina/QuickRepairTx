@@ -1,9 +1,12 @@
 //components
 import ComponentHeader from "../../../components/componentHeader/ComponentHeader";
+import Button from "../../../components/Buttons/components/Button";
 
 //constants
-import { FaArrowRightLong } from "react-icons/fa6";
 import { serviceCollection } from "../../../constants/constant";
+
+//react icons
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const ServiceList = () => {
   return (
@@ -41,6 +44,7 @@ const ServiceList = () => {
                       />
                     </div>
                   </div>
+
                   <a
                     href={`/service-detail/${data?.slug}`}
                     className="lg:w-[50%] flex flex-col gap-6 group"
@@ -53,14 +57,13 @@ const ServiceList = () => {
                         {data?.description}
                       </div>
                     </div>
-                    <div className="flex gap-2 items-center w-fit group-hover:text-[#7924DC] group hover:cursor-pointer ">
-                      <div className="group-hover:tracking-wide transition-all duration-700">
-                        Explore
-                      </div>
-                      <div className="group-hover:translate-x-2 transition-all duration-700">
-                        <FaArrowRightLong />
-                      </div>
-                    </div>
+
+                    <Button
+                      data={{
+                        name: "Explore More",
+                        icon: <FaArrowRightLong />,
+                      }}
+                    />
                   </a>
                 </div>
               </div>

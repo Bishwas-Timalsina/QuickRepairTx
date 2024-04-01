@@ -102,12 +102,14 @@ const Header = () => {
           </div>
 
           <div className=" lg:col-span-3  lg:flex justify-end hidden">
-            <Button
-              data={{
-                name: "Book a Service",
-                icon: <FaArrowRightLong />,
-              }}
-            />
+            <a href="/book-a-service" className="block">
+              <Button
+                data={{
+                  name: "Book a Service",
+                  icon: <FaArrowRightLong />,
+                }}
+              />
+            </a>
           </div>
           <div className=" lg:hidden  flex justify-end">
             <div className="" onClick={showDrawer}>
