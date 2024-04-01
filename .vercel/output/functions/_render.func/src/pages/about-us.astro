@@ -1,0 +1,21 @@
+---
+import PageHeader from "../components/pageHeader/components/PageHeader";
+import Layout from "../layouts/Layout.astro";
+import About from "../pageComponents/AboutUs/components/AboutUs";
+
+//styles
+import "../styles/globals.css";
+---
+
+<div>
+  <Layout>
+    <PageHeader
+      data={{
+        image:
+          "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2023/05/ac-repair.jpeg.jpg",
+        title: "About Us",
+      }}
+    />
+    <About />
+  </Layout>
+</div>
